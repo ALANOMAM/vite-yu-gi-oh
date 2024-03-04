@@ -34,10 +34,9 @@ export default{
           
         }
           this.store.images2 = this.images
-        console.log(this.store.images2)
+       // console.log(this.store.images2)
          
-       /* console.log(res.data.results)
-        this.store.characters = res.data.results*/
+      
     })
 
   },

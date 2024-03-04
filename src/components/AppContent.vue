@@ -1,15 +1,26 @@
 
 <script>
+import {store} from '../store.js'
 
 export default{
-    name:'AppContent'
- 
+    name:'AppContent',
+
+  data(){
+       return{
+        store,
+       }
+  },
+
+  methods:{
+    
+  }
+
 
 }
 </script>
 
 <template>
-    <h1>prova</h1>
+         <img :src="store.images2[0]" alt="">
 </template>
 
 <style>
