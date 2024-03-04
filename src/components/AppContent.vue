@@ -19,8 +19,9 @@ export default{
 }
 </script>
 
-<template>
-         <img :src="store.images2[0]" alt="">
+<template>  
+         
+         <img v-for="image in store.images2" :src="image" alt="">
 </template>
 
 <style>
