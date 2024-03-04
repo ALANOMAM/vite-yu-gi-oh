@@ -20,10 +20,30 @@ export default{
 </script>
 
 <template>  
+            
+          <div class="layout">
+          <div v-for="image in store.images2" class="item">
+            <img :src="image" alt="">
+          </div>
+          </div>
          
-         <img v-for="image in store.images2" :src="image" alt="">
 </template>
 
-<style>
+<style lang="scss">
+
+.layout{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item{
+    width: calc(100% /5);
+    height: auto;
+    padding: 10px;
+
+    img{
+        width: 100%;
+    }
+}
 
 </style>
