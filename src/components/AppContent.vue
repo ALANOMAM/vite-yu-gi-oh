@@ -1,9 +1,16 @@
 
 <script>
+import CardItem from './CardItem.vue'
 import {store} from '../store.js'
 
 export default{
+
+    components:{
+     CardItem
+    },
+
     name:'AppContent',
+
 
   data(){
        return{
@@ -20,14 +27,25 @@ export default{
 </script>
 
 <template>  
+     <div class="layout">
+        <div v-for="image in store.images2" class="item">   
+     <CardItem 
+     :cardImage="image.card_images[0].image_url_small"
+     :cardName="image.name"
+     :cardArchetype="image.archetype"
+     >
+    
+    </CardItem>
+    </div>
+    </div>
             
-          <div class="layout">
+          <!--<div class="layout">
           <div v-for="image in store.images2" class="item">
             <img :src="image.card_images[0].image_url_small" alt="">
             <span>{{image.name}}</span>
             <span>{{image.archetype}}</span>
           </div>
-          </div>
+          </div> -->
          
 </template>
 
