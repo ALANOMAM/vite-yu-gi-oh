@@ -29,12 +29,14 @@ export default{
        
 
         for(let i=0; i<res.data.data.length; i++ ){
-         // console.log(res.data.data[i].card_images)
-          this.images.push( res.data.data[i].card_images[0].image_url_small)
+          //console.log(res.data.data[i])
+         // this.images.push( res.data.data[i].card_images[0].image_url_small)
+
+         this.images.push( res.data.data[i])
           
         }
           this.store.images2 = this.images
-       // console.log(this.store.images2)
+        //console.log(this.store.images2)
          
       
     })
