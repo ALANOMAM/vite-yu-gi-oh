@@ -48,11 +48,28 @@ export default{
 </script>
 
 <template>
+  <div class="header">
+    <h1>YU-GI-OH API</h1>
+  </div>
+
+  <div class="body">
     <AppContent></AppContent>
+  </div>
 
   
 </template>
 
 <style>
+.header{
+  background-color: white;
+  color: black;
+  padding: 10px 30px;
+}
+
+.body{
+padding: 50px;
+background-color:rgba(212, 143, 56, 1) ;
+}
+
 
 </style>

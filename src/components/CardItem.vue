@@ -25,34 +25,23 @@ export default{
 </script>
 
 <template>  
-              
+              <div class="item-content">
             <img :src="cardImage" alt="">
             <span>{{cardName}}</span>
             <span>{{cardArchetype}}</span>
-         
+             </div>
 </template>
 
 <style lang="scss">
 
-/*.layout{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-
-.item{
-    width: calc(100% /5);
-    height: auto;
+.item-content{
+    border: 1px red solid;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:20px;
     background-color:rgba(212, 143, 56, 1) ;
-
-    img{
-        width: 100%;
-    }
 }
-*/
+
 </style>

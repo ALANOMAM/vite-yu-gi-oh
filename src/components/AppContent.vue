@@ -27,7 +27,13 @@ export default{
 </script>
 
 <template>  
-     <div class="layout">
+
+    <div class="card-container">
+
+     <div class="number-of-cards">
+      FOUND X CARDS
+     </div>
+     <div class="card-layout">
         <div v-for="image in store.images2" class="item">   
      <CardItem 
      :cardImage="image.card_images[0].image_url_small"
@@ -38,33 +44,33 @@ export default{
     </CardItem>
     </div>
     </div>
-            
-          <!--<div class="layout">
-          <div v-for="image in store.images2" class="item">
-            <img :src="image.card_images[0].image_url_small" alt="">
-            <span>{{image.name}}</span>
-            <span>{{image.archetype}}</span>
-          </div>
-          </div> -->
+    </div>
+
          
 </template>
 
 <style lang="scss">
 
-.layout{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.card-container{
+    background-color: white;
+    padding: 20px;
+
+    .number-of-cards{
+        background-color:rgba(33, 37, 41, 1);
+        padding: 5px 10px;
+    }
 }
 
-.item{
-    width: calc(100% /5);
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:20px;
-    background-color:rgba(212, 143, 56, 1) ;
+.card-layout{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item{   
+    width: calc(100% / 5 );
+     height: auto;
+     border: 1px solid blue;
+    padding: 10px;
 
     img{
         width: 100%;
