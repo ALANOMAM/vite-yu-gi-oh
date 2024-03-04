@@ -35,7 +35,7 @@ export default{
 <style lang="scss">
 
 .item-content{
-    border: 1px red solid;
+    /*border: 1px red solid;*/
     height: 100%;
     display: flex;
     flex-direction: column;

@@ -31,7 +31,7 @@ export default{
     <div class="card-container">
 
      <div class="number-of-cards">
-      FOUND X CARDS
+      FOUND <span>{{ store.images2.length }}</span> CARDS
      </div>
      <div class="card-layout">
         <div v-for="image in store.images2" class="item">   
@@ -69,7 +69,7 @@ export default{
 .item{   
     width: calc(100% / 5 );
      height: auto;
-     border: 1px solid blue;
+    /* border: 1px solid blue;*/
     padding: 10px;
 
     img{
