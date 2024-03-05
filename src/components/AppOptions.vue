@@ -38,8 +38,8 @@ import axios from 'axios'
 <template>
     
     <select name="options" id="card-options">
-        <option value="">Scegliere una opzione</option>
-        <option value="">yo</option>
+        <option value="">Scegliere una opzione di archetype name</option>
+        <option  v-for="archetype in selectItems" value="">{{ archetype }}</option>
     </select>
 
 </template>
