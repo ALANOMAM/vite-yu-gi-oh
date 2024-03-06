@@ -7,10 +7,6 @@ import AppContent from './components/AppContent.vue'
 export default{
 
 
-  components:{
-    AppContent,
-    AppOptions
-  },
 
     data(){
       return{
@@ -19,6 +15,10 @@ export default{
           images2:[],
 
           store,
+
+          
+
+
       }
     },
 
@@ -43,6 +43,28 @@ export default{
     })
 
   },
+
+
+  components:{
+    AppContent,
+    AppOptions
+  },
+
+  methods: {
+
+searchCard() {
+
+  axios.get('/*https://rickandmortyapi.com/api/character?name=rick*/')
+    .then(res => {
+        //console.log(res.data.results)
+
+      //this.store.characters = res.data.results;
+    });
+
+  console.log("Ricerca percepita")
+},
+
+},
  
 
 }
@@ -53,8 +75,9 @@ export default{
     <h1>YU-GI-OH API</h1>
   </div>
 
+  
   <div class="body">
-    <AppOptions></AppOptions>
+    <AppOptions @search="searchCard()"></AppOptions>
     <AppContent></AppContent>
   </div>
 

@@ -36,11 +36,11 @@ import axios from 'axios'
 </script>
 
 <template>
-    
-    <select name="options" id="card-options">
+    <!--@change fa in modo tale che ogni volta che cambio il valore delle options viene emmesso l'evento @search-->
+     <select @change="$emit('search')"  name="options" id="card-options">
         <option value="">Scegliere una opzione di archetype name</option>
-        <option  v-for="archetype in selectItems" value="">{{ archetype }}</option>
-    </select>
+        <option  v-for="archetype in selectItems"  :value="archetype">{{ archetype }}</option>  
+   </select>
 
 </template>
 
