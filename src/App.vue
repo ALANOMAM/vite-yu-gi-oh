@@ -54,14 +54,14 @@ export default{
 
 searchCard() {
 
-  axios.get('/*https://rickandmortyapi.com/api/character?name=rick*/')
-    .then(res => {
-        //console.log(res.data.results)
-
-      //this.store.characters = res.data.results;
-    });
-
-  console.log("Ricerca percepita")
+    // console.log('Richiesta di filtro')
+    axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0&archetype=' + this.store.filterValue) 
+        .then(res => {
+          // console.log('carte', res.data.data)
+           this.store.images2 = res.data.data;
+      });
+     
+    //console.log("Ricerca percepita")
 },
 
 },

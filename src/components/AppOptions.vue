@@ -1,5 +1,6 @@
 
 <script>
+import {store} from '../store.js'
 import axios from 'axios'
    export default{
        name:"AppOptions",
@@ -7,7 +8,8 @@ import axios from 'axios'
        data(){
           return{
              //array che riempirò con i vari elementi
-             selectItems:[]
+             selectItems:[],
+             store
           }
        }, 
 
@@ -37,9 +39,14 @@ import axios from 'axios'
 
 <template>
     <!--@change fa in modo tale che ogni volta che cambio il valore delle options viene emmesso l'evento @search-->
-     <select @change="$emit('search')"  name="options" id="card-options">
+     <select
+      @change="$emit('search')" 
+      v-model="store.filterValue" 
+      name="options" id="card-options">
+
         <option value="">Scegliere una opzione di archetype name</option>
         <option  v-for="archetype in selectItems"  :value="archetype">{{ archetype }}</option>  
+
    </select>
 
 </template>
